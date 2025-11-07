@@ -2,16 +2,16 @@
 #include <string>
 using namespace std;
 
-// Struktura pro jednu lokaci (místo)
+// Struktura pro jedno místo
 struct Lokace {
     string jmeno;
     string popis;
 
-    // ukazatele na jiné lokace
-    Lokace* nahoru;
-    Lokace* dolu;
-    Lokace* doleva;
-    Lokace* doprava;
+// Ukazatele na jiné lokace
+Lokace* nahoru;
+Lokace* dolu;
+Lokace* doleva;
+Lokace* doprava;
 
     bool maPredmet;
     string predmet;
@@ -19,7 +19,10 @@ struct Lokace {
 
 // Inventář hráče
 struct Hrac {
-    bool privěsek = false;
-    bool zrcadlo = false;
-    bool pirko = false;
+    bool bomba = false;
+    bool stipacky = false;
+    bool munice = false;
+    bool bren = false;
 };
+
+
