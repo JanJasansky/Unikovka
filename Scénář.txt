@@ -1,0 +1,114 @@
+HRA
+
+1 Václav: „Dušane, mám tu nabídku z FC Drakonia. Tříletá smlouva, 85 tisíc měsíčně a prémie za góly. Co myslíš?“
+(1) „Podepiš to, chci hrát!“ (2) „Zkus vyjednat víc.“ (3) „Není to málo?“
+
+2 Václav: „Dobře, ale víš, že tlak bude obrovský. Jsi připraven?“
+(1) „Narodil jsem se pro tlak.“ (2) „Snad to zvládnu.“ (3) „Nevím, nikdy jsem to nezažil.“
+
+3 Václav: „Jaké číslo chceš na dres?“
+(1) „Desítku. Jako kapitán.“ (2) „Cokoliv, jsem tu nový.“ (3) „Sedmičku. Ta mi přináší štěstí.“
+
+4 Václav: „Mám ti tam připsat i bonus za góly?“
+(1) „Jasně, budu je potřebovat.“ (2) „Hlavně ať hraju.“ (3) „Nech to být, neřeším prachy.“
+
+5 Václav: „Mimochodem, novináři už o tobě píšou. Mám to komentovat?“
+(1) „Jo, ukaž jim, že přichází hvězda.“ (2) „Nech to být, chci klid.“ (3) „Řekni jim, že jdu makat.“
+
+6 Václav: „Zítra máš podpis v klubu. Bude tam trenér Honza. Bacha, nesnáší opozdilce.“
+(1) „Neboj, budu tam první.“ (2) „V pohodě, to zvládnu.“ (3) „A co, jeden den se nic nestane.“
+
+7 Václav: „Na závěr – víš, že ti může změnit život každá volba, že?“
+(1) „Jasně, proto si dávám pozor.“ (2) „Uvidíme, jak to dopadne.“ (3) „Život je hra, ne kalkulačka.“
+
+8 Václav: „Takže potvrzuju přestup?“
+(1) „Ano, podepisuj!“ (2) „Počkej, chci to promyslet.“ (3) „Podepiš, ale pod podmínkami.“
+
+ SCÉNA 2 – PODPIS V KLUBU 
+
+9 Honza: „Vítej v Drakonii. U mě platí dvě věci: makat a být včas.“
+(1) „Rozumím, trenére.“ (2) „Jasně, jen žádný stres.“ (3) „Tak to máme společné.“
+
+10 Honza: „Zítra trénink v 7:00. Přijdeš?“
+(1) „Budu tam dřív.“ (2) „Zkusím to stihnout.“ (3) „Sedm? To je vražda.“
+
+11 Honza: „Jak se cítíš po podpisu?“
+(1) „Motivovaně.“ (2) „Jsem nervózní.“ (3) „V klidu, mám to pod kontrolou.“
+
+12 Honza: „Máš velký potenciál, ale i ego. Co převáží?“
+(1) „Pokora.“ (2) „Ego mě žene kupředu.“ (3) „Záleží na dni.“
+
+13 Lukáš (přichází): „Hele kámo, večer hospoda. Zapijem to, ne?“
+(1) „Jasně!“ (2) „Ne, chci být fit.“ (3) „Jedno pivo a domů.“
+
+14 Honza (k Dušanovi): „Takhle to začíná. Jeden drink, a pak to jde z kopce.“
+(1) „Nebojte, vím, co dělám.“ (2) „Máte pravdu.“ (3) „Jednou se to přece musí oslavit.“
+
+15 Václav (volá): „Pamatuj, Honza tě sleduje. Nepokaz to první den.“
+(1) „Neboj, dám si pozor.“ (2) „Zvládnu to i s pivem.“ (3) „To je jen trénink, ne válka.“
+
+ SCÉNA 3 – HOSPODA NEBO DOMOV 
+
+16 Lukáš: „Na Dušana! Nový hráč Drakonie!“
+(1) „Na zdraví!“ (2) „Díky, ale jen jedno.“ (3) „Nepiju, kámo.“
+
+17 Lukáš: „Tak povídej, jaký to je podepsat profík?“
+(1) „Úžasný pocit.“ (2) „Upřímně? Cítím tlak.“ (3) „Je to jen smlouva, klid.“
+
+18 Lukáš: „Dej si ještě jedno, nekaz partu.“
+(1) „Dobře, ale poslední.“ (2) „Ani náhodou.“ (3) „Ať žije Drakonia!“
+
+19 Lukáš: „Víš, že trenér tohle nesnáší?“
+(1) „Neví, nebolí.“ (2) „Tak radši půjdu.“ (3) „Jedno pivo nikomu neublíží.“
+
+20 Václav (volá): „Jsi v hospodě? Trenér to zjistí.“
+(1) „Ne, jen voda!“ (2) „Jen chvilku, slibuju.“ (3) „Klid, Venco, mám to pod kontrolou.“
+
+21 Ráno – trénink: „Dušane, proč máš kruhy pod očima?“
+(1) „Špatně jsem spal.“ (2) „Byl jsem venku.“ (3) „To je alergie.“
+
+22 Honza: „Takhle to začíná. Máš talent, ale žádnou vůli.“
+(1) „Omlouvám se.“ (2) „To se už nestane.“ (3) „To přeháníte.“
+
+23 Lukáš: „Neber to vážně, trenér má vždycky kecy.“
+(1) „Má pravdu.“ (2) „Někdy jo.“ (3) „Kašlu na něj.“
+
+SCÉNA 4 – PRVNÍ ZÁPAS 
+
+24 Honza: „Jdeš na hřiště. Máš 15 minut. Co uděláš?“
+(1) „Makám naplno.“ (2) „To je málo času.“ (3) „Dám gól.“
+
+25 Na hřišti: „Balón máš u nohy.“
+(1) „Přihrávám spoluhráči.“ (2) „Střílím!“ (3) „Zpanikařím.“
+
+26 Fanoušci bučí:
+(1) „Soustředím se dál.“ (2) „Rozčiluje mě to.“ (3) „Mávnu na ně.“
+
+27 Po zápase Honza: „Nebyl to špatný debut.“
+(1) „Díky, trenére.“ (2) „Chtěl jsem dát víc.“ (3) „Bylo to v pohodě.“
+
+28 Václav: „Dobrá práce, mám nové nabídky.“
+(1) „Ještě jsem nic nedokázal.“ (2) „To zní skvěle!“ (3) „Kolik za to?“
+
+29 Lukáš: „Slavíme, jsi hvězda!“
+(1) „Ne, jdu regenerovat.“ (2) „Jedno pivo.“ (3) „Celou noc!“
+
+30 Ráno: „Zaspal jsi trénink.“
+(1) „Promiň.“ (2) „Nestalo se nic.“ (3) „Byl jsem hvězda, ne?“
+
+ SCÉNA 5 – FINÁLE 
+
+31 Honza: „Tak, končí sezóna. Jsem na tebe pyšný – nebo zklamaný?“
+(1) „Děkuju za důvěru.“ (2) „Dělal jsem, co šlo.“ (3) „Můžu za to alkohol.“
+
+32 Václav: „Z Itálie přišla nabídka. Chceš přestoupit?“
+(1) „Ano, jsem připraven.“ (2) „Nevím, jsem unavený.“ (3) „Kolik platí?“
+
+33 Lukáš: „Jdem to zapít, brácho.“
+(1) „Ne, musím letět na trénink.“ (2) „Jedno na rozloučenou.“ (3) „Nalej mi dvakrát.“
+
+34 Honza: „Máš poslední slovo. Kdo jsi, Dušane?“
+(1) „Profesionál.“ (2) „Ztracený talent.“ (3) „Člověk, co žil naplno.“
+
+35 Václav: „Dobře, synku. Tak tohle je tvůj příběh.“
+(1) „Hvězda sezony.“  (2) „Alkoholik.“  (3) „Někde mezi.“ 
