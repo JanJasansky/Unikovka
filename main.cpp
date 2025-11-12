@@ -17,7 +17,7 @@ void introduction() {
 
 // ==
 void line () {
-    cout << "==============================\n";
+    cout << "==============================================\n";
 }
 
 
@@ -73,7 +73,7 @@ void scena1() {
 
 int main() {
     line();
-    cout << "Vitejte v pribehove hre - Dusanova kariera.\n";
+    cout << "  Vitejte v pribehove hre - Dusanova kariera.\n";
     line ();
     
     introduction();
