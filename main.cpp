@@ -52,7 +52,6 @@ void pauseMenu() {
     }
 }
 
-
 // funkce co cte volby
 int ctiVolbu(int minimum, int maximum) {
     int cislo;
@@ -93,6 +92,7 @@ void scena1() {
     cout << "2) \"Zkus vyjednat vic.\"\n";
     cout << "3) \"Neni to malo?\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
     if (volba == 1) {
         cout << "Vaclav: \"Beru to. Zitra tiskovka.\"\n";
         discipline += 1;
@@ -111,6 +111,7 @@ void scena1() {
     cout << "2) \"Snad to zvladnu.\"\n";
     cout << "3) \"Nevim, nikdy jsem to nezazil.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
     if (volba == 1) {
         cout << "Vaclav: \"Tak to chci slyset.\"\n";
         discipline += 1;
@@ -129,6 +130,7 @@ void scena1() {
     cout << "2) \"Cokoliv, jsem tu novy.\"\n";
     cout << "3) \"Sedmicku, ta mi prinasi stesti.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
     if (volba == 1) {
         cout << "Vaclav: \"Desitka? Odvazny vyber.\"\n";
         reputation += 1;
@@ -146,6 +148,7 @@ void scena1() {
     cout << "2) \"Hlavne at hraju.\"\n";
     cout << "3) \"Nech to byt, neresim prachy.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
     if (volba == 1) {
         cout << "Vaclav: \"Tak jo, bonusy tam dam.\"\n";
         performance += 1;
@@ -164,6 +167,7 @@ void scena1() {
     cout << "2) \"Nech to byt, chci klid.\"\n";
     cout << "3) \"Rekni jim, ze jdu makat.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
     if (volba == 1) {
         cout << "Vaclav: \"Dobře, udelam z tebe velke jmeno.\"\n";
         reputation += 1;
@@ -182,6 +186,7 @@ void scena1() {
     cout << "2) \"V pohode, stihnu to.\"\n";
     cout << "3) \"A co, jeden den se nic nestane.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
     if (volba == 1) {
         cout << "Vaclav: \"Vyborne, prvni dojem je klicovy.\"\n";
         discipline += 1;
@@ -199,6 +204,7 @@ void scena1() {
     cout << "2) \"Uvidime, jak to dopadne.\"\n";
     cout << "3) \"Zivot je hra.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
     if (volba == 1) {
         cout << "Vaclav: \"Rozumne.\"\n";
         discipline += 1;
@@ -211,11 +217,12 @@ void scena1() {
 
     // 8
     line();
-    cout << "8) Vaclav: \"Takze... potvrzuju prestup?\"\n";
+    cout << "😎 Vaclav: \"Takze... potvrzuju prestup?\"\n";
     cout << "1) \"Ano, podepisuj.\"\n";
     cout << "2) \"Pockej, premyslim.\"\n";
     cout << "3) \"Podepis, ale pod podminkami.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
     if (volba == 1) {
         cout << "Vaclav: \"Hotovo. Od zitra jsi hrac Drakonie.\"\n";
         discipline += 1;performance += 1;
@@ -245,6 +252,14 @@ void scena2() {
     cout << "2) \"Jasne, jen zadny stres.\"\n";
     cout << "3) \"Tak to mame spolecne.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        discipline += 1; // D +1
+    } else if (volba == 2) {
+        performance -= 1; // P -1
+    } else {
+        reputation += 1; // R +1
+    }
 
     // 10
     line();
@@ -253,6 +268,14 @@ void scena2() {
     cout << "2) \"Zkusim to stihnout.\"\n";
     cout << "3) \"Sedm? To je vrazda.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        discipline += 1; // D +1
+    } else if (volba == 2) {
+        // 0
+    } else if (volba == 3) {
+        discipline -= 1; performance -= 1; // D -1, P -1
+    }
 
     // 11
     line();
@@ -261,6 +284,14 @@ void scena2() {
     cout << "2) \"Jsem nervozni.\"\n";
     cout << "3) \"V klidu, mam to pod kontrolou.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        performance += 1; // P +1
+    } else if (volba == 2) {
+        discipline -= 1; // D -1
+    } else {
+        reputation += 1; // R +1
+    }
 
     // 12
     line();
@@ -269,6 +300,14 @@ void scena2() {
     cout << "2) \"Ego me zene kupredu.\"\n";
     cout << "3) \"Zalezi na dni.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        reputation += 1; // R +1
+    } else if (volba == 2) {
+        performance += 1; // P +1
+    } else {
+        // 0
+    }
 
     // 13
     line();
@@ -277,6 +316,14 @@ void scena2() {
     cout << "2) \"Ne, chci byt fit.\"\n";
     cout << "3) \"Jedno pivo a domu.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        reputation += 1; performance -= 2; // R +1, P -2
+    } else if (volba == 2) {
+        discipline += 1; performance += 1; // D +1, P +1
+    } else {
+        reputation += 1; // D 0, R +1
+    }
 
     // 14
     line();
@@ -285,6 +332,14 @@ void scena2() {
     cout << "2) \"Mate pravdu.\"\n";
     cout << "3) \"Jednou se to prece musi oslavit.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        discipline += 1; // D +1
+    } else if (volba == 2) {
+        // D 0
+    } else {
+        reputation += 1; performance -= 1; // R +1, P -1
+    }
 
     // 15
     line();
@@ -293,6 +348,14 @@ void scena2() {
     cout << "2) \"Zvladnu to i s pivem.\"\n";
     cout << "3) \"To je jen trenink, ne valka.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        discipline += 1; // D +1
+    } else if (volba == 2) {
+        performance -= 1; discipline -= 1; // P -1, D -1
+    } else {
+        // 0
+    }
 
     cout << endl << "[Konec sceny 2]" << endl;
 }
@@ -312,6 +375,14 @@ void scena3() {
     cout << "2) \"Diky, ale jen jedno.\"\n";
     cout << "3) \"Nepiju, kamo.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        discipline -= 1; reputation += 1; // D -1, R +1
+    } else if (volba == 2) {
+        // D 0
+    } else {
+        discipline += 1; performance += 1; // D +1, P +1
+    }
 
     // 17
     line();
@@ -320,6 +391,14 @@ void scena3() {
     cout << "2) \"Uprimne? Citim tlak.\"\n";
     cout << "3) \"Je to jen smlouva, klid.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        performance += 1; // P +1
+    } else if (volba == 2) {
+        discipline -= 1; performance -= 1; // D -1, P -1
+    } else {
+        // R 0
+    }
 
     // 18
     line();
@@ -328,6 +407,14 @@ void scena3() {
     cout << "2) \"Ani nahodou.\"\n";
     cout << "3) \"At zije Drakonia!\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        discipline += 1; // D +1
+    } else if (volba == 2) {
+        discipline += 1; performance += 1; // D +1, P +1
+    } else {
+        reputation += 1; discipline -= 1; // R +1, D -1
+    }
 
     // 19
     line();
@@ -336,6 +423,14 @@ void scena3() {
     cout << "2) \"Tak radsi pujdu.\"\n";
     cout << "3) \"Jedno pivo nikomu neublizi.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        discipline -= 1; // D -1
+    } else if (volba == 2) {
+        discipline += 1; // D +1 (P +0)
+    } else {
+        discipline -= 1; performance -= 1; // D -1, P -1
+    }
 
     // 20
     line();
@@ -344,194 +439,315 @@ void scena3() {
     cout << "2) \"Jen chvilku, slibuju.\"\n";
     cout << "3) \"Klid, Venco, mam to pod kontrolou.\"\n";
     volba = ctiVolbu(1, 3);
+    // staty odpovědí
+    if (volba == 1) {
+        discipline += 1; // D +1
+    } else if (volba == 2) {
+        discipline -= 1; performance -= 1; // D -1, P -1
+    } else {
+        reputation += 3; // R +1
+    }
 
     // 21
     line();
     cout << "21) Rano – trenink: \"Dusane, proc mas kruhy pod ocima?\"\n";
     cout << "1) \"Spatne jsem spal.\"\n";
     cout << "2) \"Byl jsem venku.\"\n";
-    cout << "3) \"To je alergie.\"\n";
+    cout << "3) \"To je alergie.\"\n"; 
     volba = ctiVolbu(1, 3);
+    
+    // Info příběhu
+    //line();
+    //cout << "(Trenér tě odhalil): \"(Dušan si pomyslí)\"\n";
+    //cout << "1) \"Jak to zjistil.\"\n";
+    //cout << "2) \"Tak to su v prdeli.\"\n";
+    //cout << "3) \"Tak to je debil.\"\n";
+    //volba = ctiVolbu(1, 3);
 
-    // 22
-    line();
-    cout << "22) Honza: \"Takhle to zacina. Mas talent, ale zadnou vuli.\"\n";
-    cout << "1) \"Omlouvam se.\"\n";
-    cout << "2) \"To se uz nestane.\"\n";
-    cout << "3) \"To prehanite.\"\n";
-    volba = ctiVolbu(1, 3);
+// 22
+line();
+cout << "22) Honza: \"Takhle to zacina. Mas talent, ale zadnou vuli.\"\n";
+cout << "1) \"Omlouvam se.\"\n";
+cout << "2) \"To se uz nestane.\"\n";
+cout << "3) \"To prehanite.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    // D 0
+} else if (volba == 2) {
+    reputation += 1; // R +1,
+} else {
+    reputation -= 2; // R -2,
+}
 
-    // 23
-    line();
-    cout << "23) Lukas: \"Neber to vazne, trener ma vzdycky kecy.\"\n";
-    cout << "1) \"Ma pravdu.\"\n";
-    cout << "2) \"Nekdy jo.\"\n";
-    cout << "3) \"Kaslu na nej.\"\n";
-    volba = ctiVolbu(1, 3);
+// 23
+line();
+cout << "23) Lukas: \"Neber to vazne, trener ma vzdycky kecy.\"\n";
+cout << "1) \"Ma pravdu.\"\n";
+cout << "2) \"Nekdy jo.\"\n";
+cout << "3) \"Kaslu na nej.\"\n";
+volba = ctiVolbu(1, 3);
 
-    cout << endl << "[Konec sceny 3]" << endl;
+
+cout << endl << "[Konec sceny 3]" << endl;
 }
 
 // SCENA 4 - PRVNI ZAPAS
 void scena4() {
-    int volba;
+int volba;
 
-    line();
-    cout << "SCENA 4 - Prvni zapas" << endl;
-    line();
+line();
+cout << "SCENA 4 - Prvni zapas" << endl;
+line();
 
-    // 24
-    line();
-    cout << "24) Honza: \"Jdes na hriste. Mas 15 minut. Co udelas?\"\n";
-    cout << "1) \"Makam naplno.\"\n";
-    cout << "2) \"To je malo casu.\"\n";
-    cout << "3) \"Dam gol.\"\n";
-    volba = ctiVolbu(1, 3);
+// 24
+line();
+cout << "24) Honza: \"Jdes na hriste. Mas 15 minut. Co udelas?\"\n";
+cout << "1) \"Makam naplno.\"\n";
+cout << "2) \"To je malo casu.\"\n";
+cout << "3) \"Dam gol.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    discipline += 1; performance += 2; // D +1, P +2
+} else if (volba == 2) {
+    // D 0
+} else {
+    performance += 2; reputation += 1; // P +2, R +1
+}
 
-    // 25
-    line();
-    cout << "25) Na hristi: \"Balon mas u nohy.\"\n";
-    cout << "1) \"Prihravam spoluhraci.\"\n";
-    cout << "2) \"Strilim!\"\n";
-    cout << "3) \"Zpanikarim.\"\n";
-    volba = ctiVolbu(1, 3);
+// 25
+line();
+cout << "25) Na hristi: \"Balon mas u nohy.\"\n";
+cout << "1) \"Prihravam spoluhraci.\"\n";
+cout << "2) \"Strilim!\"\n";
+cout << "3) \"Zpanikarim.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    performance += 1; // P +1
+} else if (volba == 2) {
+    performance += 2; // P +2
+} else {
+    discipline -= 1; performance -= 1; // D -1, P -1
+}
 
-    // 26
-    line();
-    cout << "26) Fanousci buci:\n";
-    cout << "1) \"Soustredim se dal.\"\n";
-    cout << "2) \"Rozciluje me to.\"\n";
-    cout << "3) \"Mavnu na ne.\"\n";
-    volba = ctiVolbu(1, 3);
+// 26
+line();
+cout << "26) Fanousci buci:\n";
+cout << "1) \"Soustredim se dal.\"\n";
+cout << "2) \"Rozciluje me to.\"\n";
+cout << "3) \"Mavnu na ne.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    discipline += 1; performance += 1; // D +1, P +1
+} else if (volba == 2) {
+    discipline -= 1; performance -= 1; // D -1, P -1
+} else {
+    reputation -= 1; // R -1
+}
 
-    // 27
-    line();
-    cout << "27) Po zapase Honza: \"Nebyl to spatny debut.\"\n";
-    cout << "1) \"Diky, trenere.\"\n";
-    cout << "2) \"Chtel jsem dat vic.\"\n";
-    cout << "3) \"Bylo to v pohode.\"\n";
-    volba = ctiVolbu(1, 3);
+// 27
+line();
+cout << "27) Po zapase Honza: \"Nebyl to spatny debut.\"\n";
+cout << "1) \"Diky, trenere.\"\n";
+cout << "2) \"Chtel jsem dat vic.\"\n";
+cout << "3) \"Bylo to v pohode.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    reputation += 1; // R +1
+} else if (volba == 2) {
+    performance += 1; // P +1
+} else {
+    // 0
+}
 
-    // 28
-    line();
-    cout << "28) Vaclav: \"Dobra prace, mam nove nabidky.\"\n";
-    cout << "1) \"Jeste jsem nic nedokazal.\"\n";
-    cout << "2) \"To zni skvele!\"\n";
-    cout << "3) \"Kolik za to?\"\n";
-    volba = ctiVolbu(1, 3);
+// 28
+line();
+cout << "28) Vaclav: \"Dobra prace, mam nove nabidky.\"\n";
+cout << "1) \"Jeste jsem nic nedokazal.\"\n";
+cout << "2) \"To zni skvele!\"\n";
+cout << "3) \"Kolik za to?\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    // D 0
+} else if (volba == 2) {
+    reputation += 1; // R +1
+} else {
+    performance += 1; // P +1
+}
 
-    // 29
-    line();
-    cout << "29) Lukas: \"Slavime, jsi hvezda!\"\n";
-    cout << "1) \"Ne, jdu regenerovat.\"\n";
-    cout << "2) \"Jedno pivo.\"\n";
-    cout << "3) \"Celou noc!\"\n";
-    volba = ctiVolbu(1, 3);
+// 29
+line();
+cout << "29) Lukas: \"Slavime, jsi hvezda!\"\n";
+cout << "1) \"Ne, jdu regenerovat.\"\n";
+cout << "2) \"Jedno pivo.\"\n";
+cout << "3) \"Celou noc!\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    discipline += 1; performance += 1; // D +1, P +1
+} else if (volba == 2) {
+    discipline -= 1; performance -= 1; // D -1, P -1
+} else {
+    discipline -= 2; performance -= 2; // D -2, P -2
+}
 
-    // 30
-    line();
-    cout << "30) Rano: \"Zaspal jsi trenink.\"\n";
-    cout << "1) \"Promin.\"\n";
-    cout << "2) \"Nestalo se nic.\"\n";
-    cout << "3) \"Byl jsem hvezda, ne?\"\n";
-    volba = ctiVolbu(1, 3);
+// 30
+line();
+cout << "30) Rano: \"Zaspal jsi trenink.\"\n";
+cout << "1) \"Promin.\"\n";
+cout << "2) \"Nestalo se nic.\"\n";
+cout << "3) \"Byl jsem hvezda, ne?\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    reputation -= 1; // R -1
+} else if (volba == 2) {
+    // 0
+} else {
+    reputation += 1; performance += 1; // R +1, P +1
+}
 
-    cout << endl << "[Konec sceny 4]" << endl;
+cout << endl << "[Konec sceny 4]" << endl;
 }
 
 // SCENA 5 – FINALE 
 void scena5() {
-    int volba;
+int volba;
 
-    line();
-    cout << "SCENA 5 - Finale" << endl;
-    line();
+line();
+cout << "SCENA 5 - Finale" << endl;
+line();
 
-    // 31
-    line();
-    cout << "31) Honza: \"Tak, konci sezona. Jsem na tebe pysny – nebo zklamany?\"\n";
-    cout << "1) \"Dekuji za duveru.\"\n";
-    cout << "2) \"Delal jsem, co slo.\"\n";
-    cout << "3) \"Muzu za to alkohol.\"\n";
-    volba = ctiVolbu(1, 3);
+// 31
+line();
+cout << "31) Honza: \"Tak, konci sezona. Jsem na tebe pysny – nebo zklamany?\"\n";
+cout << "1) \"Dekuji za duveru.\"\n";
+cout << "2) \"Delal jsem, co slo.\"\n";
+cout << "3) \"Muzu za to alkohol.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    discipline += 1; reputation += 1; // D +1, R +1
+} else if (volba == 2) {
+    performance += 1; // P +1
+} else {
+    discipline -= 2; performance -= 1; // D -2, P -1
+}
 
-    // 32
-    line();
-    cout << "32) Vaclav: \"Z Italie prisla nabidka. Chces prestoupit?\"\n";
-    cout << "1) \"Ano, jsem pripraven.\"\n";
-    cout << "2) \"Nevim, jsem unaveny.\"\n";
-    cout << "3) \"Kolik plati?\"\n";
-    volba = ctiVolbu(1, 3);
+// 32
+line();
+cout << "32) Vaclav: \"Z Italie prisla nabidka. Chces prestoupit?\"\n";
+cout << "1) \"Ano, jsem pripraven.\"\n";
+cout << "2) \"Nevim, jsem unaveny.\"\n";
+cout << "3) \"Kolik plati?\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    discipline += 1; performance += 1; // D +1, P +1
+} else if (volba == 2) {
+    discipline -= 1; performance -= 1; // D -1, P -1
+} else {
+    reputation += 1; // R +1
+}
 
-    // 33
-    line();
-    cout << "33) Lukas: \"Jdem to zapit, bracho.\"\n";
-    cout << "1) \"Ne, musim letet na trenink.\"\n";
-    cout << "2) \"Jedno na rozloucenou.\"\n";
-    cout << "3) \"Nalej mi dvakrat.\"\n";
-    volba = ctiVolbu(1, 3);
+// 33
+line();
+cout << "33) Lukas: \"Jdem to zapit, bracho.\"\n";
+cout << "1) \"Ne, musim letet na trenink.\"\n";
+cout << "2) \"Jedno na rozloucenou.\"\n";
+cout << "3) \"Nalej mi dvakrat.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    discipline += 1; performance += 1; // D +1, P +1
+} else if (volba == 2) {
+    // D 0, P -1
+    performance -= 1;
+} else {
+    discipline -= 1; performance -= 2; // D -1, P -2
+}
 
-    // 34
-    line();
-    cout << "34) Honza: \"Mas posledni slovo. Kdo jsi, Dusane?\"\n";
-    cout << "1) \"Profesional.\"\n";
-    cout << "2) \"Ztraceny talent.\"\n";
-    cout << "3) \"Clovek, co zil naplno.\"\n";
-    volba = ctiVolbu(1, 3);
+// 34
+line();
+cout << "34) Honza: \"Mas posledni slovo. Kdo jsi, Dusane?\"\n";
+cout << "1) \"Profesional.\"\n";
+cout << "2) \"Ztraceny talent.\"\n";
+cout << "3) \"Clovek, co zil naplno.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    discipline += 1; performance += 1; // D +1, P +1
+} else if (volba == 2) {
+    discipline -= 1; performance -= 1; // D -1, P -1
+} else {
+    reputation += 1; // R +1
+}
 
-    // 35
-    line();
-    cout << "35) Vaclav: \"Dobre, synku. Tak tohle je tvuj pribeh.\"\n";
-    cout << "1) \"Hvezda sezony.\"\n";
-    cout << "2) \"Alkoholik.\"\n";
-    cout << "3) \"Nekde mezi.\"\n";
-    volba = ctiVolbu(1, 3);
+// 35
+line();
+cout << "35) Vaclav: \"Dobre, synku. Tak tohle je tvuj pribeh.\"\n";
+cout << "1) \"Hvezda sezony.\"\n";
+cout << "2) \"Alkoholik.\"\n";
+cout << "3) \"Nekde mezi.\"\n";
+volba = ctiVolbu(1, 3);
+// staty odpovědí
+if (volba == 1) {
+    reputation += 2; performance += 1; // R +2, P +1
+} else if (volba == 2) {
+    discipline -= 2; performance -= 2; // D -2, P -2
+} else {
+    // bez změny
+}
 
-    cout << endl << "[Konec sceny 5]" << endl;
+cout << endl << "[Konec sceny 5]" << endl;
 }
 
 int main() {
-    
-    line();
-    cout << "  Vitejte v pribehove hre - Dusanova kariera.\n";
-    line ();
 
-    introduction();
+line();
+cout << "  Vitejte v pribehove hre - Dusanova kariera.\n";
+line ();
 
-    scena1();
-    pauseMenu();
+introduction();
 
-    scena2();
-    pauseMenu();
-    
-    scena3();
-    pauseMenu();
-    
-    scena4();
-    pauseMenu();
-    scena5();
-    pauseMenu();
+scena1();
+pauseMenu();
+
+scena2();
+pauseMenu();
+
+scena3();
+pauseMenu();
+
+scena4();
+pauseMenu();
+scena5();
+pauseMenu();
 
 
-    cout << "\n=== KONEC HRY ===\n";
-    cout << "Tvoje finalni statistiky:\n";
-    showStats();
-    // determine ending
-    if (discipline >= reputation && discipline >= performance) {
-    cout << "KONEC: Dušan se stal profesionalem s obrovskou disciplinou.\n";
-    }
-    else if (reputation >= discipline && reputation >= performance) {
-    cout << "KONEC: Dušan je milacek fanousku a hvezda medii.\n";
-    }
-    else if (performance >= discipline && performance >= reputation) {
-    cout << "KONEC: Dušan dominoval na hristi jako stroj.\n";
-    }
-    else {
-    cout << "KONEC: Dušan skoncil nekde mezi slibem a realitou.\n";
-    }
-
-    
-    cout << endl << "Diky za hrani" << endl;
-    return 0;
+cout << "\n=== KONEC HRY ===\n";
+cout << "Tvoje finalni statistiky:\n";
+showStats();
+// determine ending
+if (discipline >= reputation && discipline >= performance) {
+cout << "KONEC: Dušan se stal profesionalem s obrovskou disciplinou.\n";
+}
+else if (reputation >= discipline && reputation >= performance) {
+cout << "KONEC: Dušan je milacek fanousku a hvezda medii.\n";
+}
+else if (performance >= discipline && performance >= reputation) {
+cout << "KONEC: Dušan dominoval na hristi jako stroj.\n";
+}
+else {
+cout << "KONEC: Dušan skoncil nekde mezi slibem a realitou.\n";
 }
 
+
+cout << endl << "Diky za hrani" << endl;
+return 0;
+}
